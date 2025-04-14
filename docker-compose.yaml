@@ -16,7 +16,7 @@ services:
       - 8080
 endpoints:
   labels:
-    dev.okteto.com/endpoints: https://divert-showcase-${OKTETO_NAMESPACE}.${OKTETO_DOMAIN}/servicea/chain,https://divert-showcase-${OKTETO_NAMESPACE}.${OKTETO_DOMAIN}/serviceb/chain
+    dev.okteto.com/endpoints: https://test-okteto-divert-${OKTETO_NAMESPACE}.${OKTETO_DOMAIN}/servicea/chain,https://test-okteto-divert-${OKTETO_NAMESPACE}.${OKTETO_DOMAIN}/serviceb/chain
   rules:
     - path: /servicea
       service: servicea
