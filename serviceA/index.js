@@ -26,11 +26,11 @@ function buildHeaders(headers) {
 }
 
 async function callDownstreamService(req) {
-  let url = `https://divert-showcase-${process.env.OKTETO_NAMESPACE}.${process.env.OKTETO_DOMAIN}/serviceb/chain`;
+  let url = `https://test-okteto-divert-${process.env.OKTETO_NAMESPACE}.${process.env.OKTETO_DOMAIN}/serviceb/chain`;
   const divertKey = getDivertKey(req.headers);
   if (divertKey) {
     // when diverted, route the request to the service on the diverted namespace.
-    url = `https://divert-showcase-${divertKey}.${process.env.OKTETO_DOMAIN}/serviceb/chain`;
+    url = `https://test-okteto-divert-${divertKey}.${process.env.OKTETO_DOMAIN}/serviceb/chain`;
   }
 
 
